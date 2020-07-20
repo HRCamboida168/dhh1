@@ -5,12 +5,16 @@ Imports System.ComponentModel
 
 Public Class frm_sale_inv_add
     Dim dbhpr As New db_helper
+    Public saveTyp As String
     Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel_Button.Click
         Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Close()
     End Sub
 
     Private Sub txtClinm_KeyDown(sender As Object, e As KeyEventArgs) Handles txtClinm.KeyDown
+        If act_typ = "EDIT" Then
+            Exit Sub
+        End If
         If (e.KeyValue >= 48 And e.KeyValue <= 57) Or (e.KeyValue >= 65 And e.KeyValue <= 90) Or (e.KeyValue >= 96 And e.KeyValue <= 105) Then
             ItemList()
         ElseIf e.KeyCode = Keys.Enter Then
@@ -47,13 +51,6 @@ Public Class frm_sale_inv_add
             txtClinm.Focus()
             Exit Sub
         End If
-        'create client
-        If txtcli_num.Text.Length = 0 Then
-            Dim cli_num_hdr As String = "C" & Format(Now, "yyyyMM")
-            Dim cli_num As String = dbhpr.GenerateID("select max(cli_num) from tdhh_client_details where substring(cli_num,1,7)= '" & cli_num_hdr & "' ", 4, cli_num_hdr)
-            txtcli_num.Text = cli_num
-        End If
-        dbhpr.ExecProc("tdhh_client_details_ins_upd", "cli_num", txtcli_num.Text, "cli_nm", txtClinm.Text, "sex_code", cboSexcode.SelectedValue, "birth_dt", DBNull.Value, "id_num", "", "id_typ", "", "addr_l1", txtAddress.Text, "phone_num", txtphoneNum.Text, "mobil_num", txtMobilNum.Text, "mail_addr", txtMail.Text, "cli_typ", "C", "rec_status", "A")
 
         With frmBill002AddItem
             'Dim sqlStr As String = "Select crcy_code, concat(crcy_code,': ', crcy_desc_en ) crcy_desc from tcurrency_masters where stat_cd='A'"
@@ -92,12 +89,10 @@ Public Class frm_sale_inv_add
                 dgvFilter.Height = dgvFilter.Height + 20
             Next
             dgvFilter.Visible = True
-
             'SET LOCATION
             dgvFilter.Left = txtClinm.Left
             dgvFilter.Top = txtClinm.Bottom
-            dgvFilter.Width = txtNetAmt.Width * 2
-
+            dgvFilter.Width = txtNetAmt.Width * 2.5
         Else
             dgvFilter.Visible = False
         End If
@@ -126,6 +121,9 @@ Public Class frm_sale_inv_add
     End Sub
 
     Private Sub txtClinm_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtClinm.KeyPress
+        If act_typ = "EDIT" Then
+            Exit Sub
+        End If
         If e.KeyChar = Chr(8) Then
             ItemList()
         End If
@@ -152,11 +150,12 @@ Public Class frm_sale_inv_add
     Dim old_cli_length As Integer
     Dim new_netAmt As Double
     Dim new_cli_length As Integer
+    Dim act_typ As String
     Private Sub frm_sale_inv_add_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dgvItem.Columns("qty").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
         dgvItem.Columns("unitprice").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight
         dgvItem.Columns("total").HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight
-
+        act_typ = frm_sale_inv.Act_typ
         'store old values
         old_netAmt = IIf(IsNumeric(txtNetAmt.Text) = False, 0, txtNetAmt.Text)
         old_cli_length = txtcli_num.Text.Trim.Length + txtphoneNum.Text.Trim.Length + txtMobilNum.Text.Trim.Length + txtAddress.Text.Trim.Length + txtMail.Text.Length
@@ -178,7 +177,6 @@ Public Class frm_sale_inv_add
             MsgBox("Incorrect number format!!!", MsgBoxStyle.Exclamation, "Add Item")
             Exit Sub
         End If
-
         CalAmt()
     End Sub
     Private Sub CalAmt()
@@ -187,11 +185,9 @@ Public Class frm_sale_inv_add
         Dim gross_amt As Double = IIf(IsNumeric(txtGrosamt.Text) = False, 0, CDbl(txtGrosamt.Text))
         Dim dscnt_amt As Double = IIf(IsNumeric(txtDiscntAmt.Text) = False, 0, CDbl(txtDiscntAmt.Text))
         Dim vat As Double = IIf(IsNumeric(txtVAT.Text) = False, 0, CDbl(txtVAT.Text))
-
         'Net
         Dim net_amt As Double = Math.Round((gross_amt - dscnt_amt) + (((gross_amt - dscnt_amt) * vat) / 100), 2)
         txtNetAmt.Text = net_amt
-
     End Sub
 
     Private Sub dgvFilter_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFilter.CellDoubleClick
@@ -199,7 +195,7 @@ Public Class frm_sale_inv_add
         dgvFilter.Visible = False
     End Sub
 
-    Private Sub SaveInvoice(inv_status As String)
+    Private Sub InvoiceSave(inv_status As String)
         'remove old
         dbhpr.ExecProc("tdhh_invoice_details_del", "inv_num", txtInvNum.Text)
         'start new record
@@ -214,8 +210,6 @@ Public Class frm_sale_inv_add
         cmd.Transaction = Trans1
         Try
             '-->> Save Master
-            'Dim inv_num_dhr As String = "B" & Format(Now, "yyyyMM")
-            'Dim inv_num As String = dbhpr.GenerateID("select max(inv_num) from tdhh_invoice_masters where substring(inv_num,1,7)='" & inv_num_dhr & "'", 4, inv_num_dhr)
             cmd.CommandText = "tdhh_invoice_masters_ins"
             CreatePar(cmd, "inv_num", txtInvNum.Text, "cli_num", txtcli_num.Text,
                       "inv_issu_dt", dtpInvDt.Value.Date,
@@ -249,6 +243,55 @@ Public Class frm_sale_inv_add
         End Try
 
     End Sub
+    Private Sub InvoiceEdit()
+        'remove old
+        dbhpr.ExecProc("tdhh_invoice_details_del", "inv_num", txtInvNum.Text)
+        'start new record
+        Dim Objcn As DBSingle
+        Dim cn As SqlConnection
+        Objcn = DBSingle.GetInstance
+        cn = Objcn.GetConnection
+
+        Dim Trans1 As SqlClient.SqlTransaction = cn.BeginTransaction
+        Dim cmd As New SqlClient.SqlCommand("", cn)
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.Transaction = Trans1
+        Try
+            '-->> Save Master
+            cmd.CommandText = "tdhh_invoice_masters_upd"
+            CreatePar(cmd, "inv_num", txtInvNum.Text,
+                      "inv_issu_dt", dtpInvDt.Value.Date,
+                      "gros_amt", txtGrosamt.Text,
+                      "dscnt_amt", txtDiscntAmt.Text,
+                      "vat_amt", txtVAT.Text,
+                      "net_amt", txtNetAmt.Text,
+                      "remarks", "",
+                      "crcy_code", cboCurrency.SelectedValue,
+                      "pening_amt", txtNetAmt.Text,
+                      "updated_dt", Now.Date,
+                      "updated_by", MasterFRM.loginName)
+            cmd.ExecuteNonQuery()
+            cmd.Parameters.Clear()
+            '--<< save master
+            '==> Save detail
+            cmd.CommandText = "tdhh_invoice_details_ins"
+            For i As Int16 = 0 To dgvItem.RowCount - 1
+                CreatePar(cmd, "inv_num", txtInvNum.Text,
+                          "itm_num", dgvItem.Rows(i).Cells(0).Value,
+                          "itm_qty", CDbl(dgvItem.Rows(i).Cells(2).Value),
+                          "unit_price", CDbl(dgvItem.Rows(i).Cells(3).Value),
+                          "tot_amt", CDbl(dgvItem.Rows(i).Cells(4).Value),
+                          "remarks", dgvItem.Rows(i).Cells(1).Value)
+                cmd.ExecuteNonQuery()
+                cmd.Parameters.Clear()
+            Next
+            '==<< Save detail
+            Trans1.Commit()
+        Catch ex As Exception
+            Trans1.Rollback()
+            MsgBox(ex.Message.ToString)
+        End Try
+    End Sub
 
     Private Sub InvoiceValidat(ByRef err_msg As String)
         If txtClinm.Text.Trim.Length = 0 Then
@@ -269,21 +312,25 @@ Public Class frm_sale_inv_add
 
         err_msg = "00" ' no error
     End Sub
-    Private Sub btnSavePrint_Click(sender As Object, e As EventArgs) Handles btnSavePrint.Click
+    Private Sub btnPrintInvoice_Click(sender As Object, e As EventArgs) Handles btnPrintInvoice.Click
         Dim errSms As String = ""
         InvoiceValidat(errSms)
         If errSms <> "00" Then
             Exit Sub
         End If
         Dim inv_status As String = "A"
-        SaveInvoice(inv_status)
-
+        If act_typ = "ADD" Then
+            InvoiceSave(inv_status)
+        Else
+            InvoiceEdit()
+        End If
         'add to Dg master
         addGridMaster(txtInvNum.Text)
-
+        'Assing new value to old record
+        old_netAmt = IIf(IsNumeric(txtNetAmt.Text) = False, 0, txtNetAmt.Text)
+        old_cli_length = txtcli_num.Text.Trim.Length + txtphoneNum.Text.Trim.Length + txtMobilNum.Text.Trim.Length + txtAddress.Text.Trim.Length + txtMail.Text.Length
         Me.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.Close()
-
     End Sub
 
     Private Sub OK_Button_Click(sender As Object, e As EventArgs) Handles OK_Button.Click
@@ -293,10 +340,16 @@ Public Class frm_sale_inv_add
             Exit Sub
         End If
         Dim inv_status As String = "A"
-        SaveInvoice(inv_status)
-
+        If frm_sale_inv.Act_typ = "ADD" Then
+            InvoiceSave(inv_status)
+        Else
+            InvoiceEdit()
+        End If
         'add to master Dg
         addGridMaster(txtInvNum.Text)
+        'Assing new value to old record
+        old_netAmt = IIf(IsNumeric(txtNetAmt.Text) = False, 0, txtNetAmt.Text)
+        old_cli_length = txtcli_num.Text.Trim.Length + txtphoneNum.Text.Trim.Length + txtMobilNum.Text.Trim.Length + txtAddress.Text.Trim.Length + txtMail.Text.Length
         'Me.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.Close()
     End Sub
@@ -316,23 +369,40 @@ Public Class frm_sale_inv_add
 
                 sqlStr = "select v.inv_num,v.cli_num,v.cli_nm,v.phone_num,v.mobil_num,v.inv_issu_dt,v.gros_amt,v.dscnt_amt,v.vat_amt,v.net_amt,v.crcy_code,v.deposit_amt,v.pening_amt,v.inv_status from vw_invoice_clients v where v.inv_num='" & inv_num & "'"
                 tbl = dbhpr.SelectData(sqlStr, "Booking")
+                If frm_sale_inv.Act_typ = "ADD" Then
 
-                For Each r As DataRow In tbl.Rows
-                    .dgInvMster.Rows.Add(r("inv_num"),
-                              r("cli_num"),
-                              r("cli_nm"),
-                              r("phone_num"),
-                              r("mobil_num"),
-                              r("inv_issu_dt"),
-                              r("gros_amt"),
-                              r("dscnt_amt"),
-                              r("vat_amt"),
-                              r("net_amt"),
-                              r("deposit_amt"),
-                              r("pening_amt"),
-                              r("crcy_code"),
-                              r("inv_status"))
-                Next
+                    For Each r As DataRow In tbl.Rows
+                        .dgInvMster.Rows.Add(r("inv_num"),
+                                  r("cli_num"),
+                                  r("cli_nm"),
+                                  r("phone_num"),
+                                  r("mobil_num"),
+                                  r("inv_issu_dt"),
+                                  r("gros_amt"),
+                                  r("dscnt_amt"),
+                                  r("vat_amt"),
+                                  r("net_amt"),
+                                  r("deposit_amt"),
+                                  r("pening_amt"),
+                                  r("crcy_code"),
+                                  r("inv_status"))
+                    Next
+                Else
+                    For Each r As DataRow In tbl.Rows
+                        .dgInvMster.SelectedRows(0).Cells(1).Value = r("cli_num")
+                        .dgInvMster.SelectedRows(0).Cells(2).Value = r("cli_nm")
+                        .dgInvMster.SelectedRows(0).Cells(3).Value = r("phone_num")
+                        .dgInvMster.SelectedRows(0).Cells(4).Value = r("mobil_num")
+                        .dgInvMster.SelectedRows(0).Cells(5).Value = r("inv_issu_dt")
+                        .dgInvMster.SelectedRows(0).Cells(6).Value = r("gros_amt")
+                        .dgInvMster.SelectedRows(0).Cells(7).Value = r("dscnt_amt")
+                        .dgInvMster.SelectedRows(0).Cells(8).Value = r("vat_amt")
+                        .dgInvMster.SelectedRows(0).Cells(9).Value = r("net_amt")
+                        .dgInvMster.SelectedRows(0).Cells(10).Value = r("deposit_amt")
+                        .dgInvMster.SelectedRows(0).Cells(11).Value = r("pening_amt")
+                        .dgInvMster.SelectedRows(0).Cells(12).Value = r("crcy_code")
+                    Next
+                End If
             End With
         Catch ex As Exception
             MsgBox(ex.Message.ToString)
@@ -350,6 +420,7 @@ Public Class frm_sale_inv_add
     End Sub
 
     Private Sub frm_sale_inv_add_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+
         With frm_sale_inv
             If .Act_typ = "EDIT" Then
                 new_netAmt = IIf(IsNumeric(txtNetAmt.Text) = False, 0, txtNetAmt.Text)
@@ -361,6 +432,17 @@ Public Class frm_sale_inv_add
                 End If
             End If
         End With
-
+        'create client
+        If txtcli_num.Text.Length = 0 Then
+            Dim cli_num_hdr As String = "C" & Format(Now, "yyyyMM")
+            Dim cli_num As String = dbhpr.GenerateID("select max(cli_num) from tdhh_client_details where substring(cli_num,1,7)= '" & cli_num_hdr & "' ", 4, cli_num_hdr)
+            txtcli_num.Text = cli_num
+        End If
+        dbhpr.ExecProc("tdhh_client_details_ins_upd", "cli_num", txtcli_num.Text, "cli_nm", txtClinm.Text, "sex_code", cboSexcode.SelectedValue, "birth_dt", DBNull.Value, "id_num", "", "id_typ", "", "addr_l1", txtAddress.Text, "phone_num", txtphoneNum.Text, "mobil_num", txtMobilNum.Text, "mail_addr", txtMail.Text, "cli_typ", "C", "rec_status", "A")
     End Sub
+
+    Private Sub cboSexcode_GotFocus(sender As Object, e As EventArgs) Handles cboSexcode.GotFocus, txtphoneNum.GotFocus, txtMobilNum.GotFocus, txtAddress.GotFocus, txtMail.GotFocus, dtpInvDt.GotFocus, txtDiscntAmt.GotFocus, txtVAT.GotFocus, btnAdd.GotFocus
+        dgvFilter.Visible = False
+    End Sub
+
 End Class

@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports Microsoft.Reporting.WinForms
+Imports System.Windows.Forms
 
 Public Class frm_sale_inv
 
@@ -11,10 +12,8 @@ Public Class frm_sale_inv
             dgInvMster.Rows.Clear()
             Dim sqlStr As String = ""
             Dim tbl As DataTable = Nothing
-
-            sqlStr = "select v.inv_num,v.cli_num,v.cli_nm,v.phone_num,v.mobil_num,v.inv_issu_dt,v.gros_amt,v.dscnt_amt,v.vat_amt,v.net_amt,v.crcy_code,v.deposit_amt,v.pening_amt,v.inv_status from vw_invoice_clients v where year(inv_issu_dt)='" & Now.Year & "' and MONTH(inv_issu_dt)='" & Now.Month & "'"
+            sqlStr = "select v.inv_num,v.cli_num,v.cli_nm,v.phone_num,v.mobil_num,v.inv_issu_dt,v.gros_amt,v.dscnt_amt,v.vat_amt,v.net_amt,v.crcy_code,v.deposit_amt,v.pening_amt,v.inv_status from vw_invoice_clients v where inv_status in('A','P')" 'year(inv_issu_dt)='" & Now.Year & "' and MONTH(inv_issu_dt)='" & Now.Month & "'"
             tbl = dbHpr.SelectData(sqlStr, "Invioce")
-
             For Each r As DataRow In tbl.Rows
                 dgInvMster.Rows.Add(r("inv_num"),
                               r("cli_num"),
@@ -48,12 +47,9 @@ Public Class frm_sale_inv
     Private Sub tbtnAdd_Click(sender As Object, e As EventArgs) Handles tbtnAdd.Click
         With frm_sale_inv_add
             Act_typ = "ADD"
-
             Dim inv_yyyymm As String = "B" & Format(Now.Date, "yyyyMM")
-
             Dim inv_num As String = dbHpr.GenerateID("select max(inv_num) from tdhh_invoice_masters v where substring(inv_num,1,7)='" & inv_yyyymm & "'", 4, inv_yyyymm)
             .txtInvNum.Text = inv_num
-
 
             Dim sqlStr As String = "select fld_valu,concat(fld_valu, ' - ', fld_valu_desc_en) val_desc from tswa_field_values f where f.fld_nm='SEX_CODE' and status='A'"
             Dim tbl As DataTable = dbHpr.SelectData(sqlStr, "client type")
@@ -68,7 +64,12 @@ Public Class frm_sale_inv
             .cboCurrency.ValueMember = "crcy_code"
 
             .ShowDialog()
-            If DialogResult = System.Windows.Forms.DialogResult.OK Then
+            'refresh detail and payment details
+            refreshGrid()
+            .Close()
+            .Dispose()
+            'print
+            If .DialogResult = System.Windows.Forms.DialogResult.OK Then
                 'print invoice
                 Dim err_sms As String = ""
                 PrintPayment(.txtInvNum.Text, err_sms)
@@ -76,9 +77,6 @@ Public Class frm_sale_inv
                     Exit Sub
                 End If
             End If
-
-            .Close()
-            .Dispose()
         End With
     End Sub
 
@@ -87,16 +85,18 @@ Public Class frm_sale_inv
     End Sub
 
     Private Sub SDEdit()
-
         If dgInvMster.SelectedRows.Count = 0 Then
             MsgBox("No data to Edit!", MsgBoxStyle.Information)
+            Exit Sub
+        End If
+        If dgInvMster.SelectedRows(0).Cells(13).Value <> "A" And dgInvMster.SelectedRows(0).Cells(13).Value <> "P" Then
+            MsgBox("Invoice can not change with status 'C', 'R' and 'X'!!!", MsgBoxStyle.Information, "Edit Invoice")
             Exit Sub
         End If
         If dgPmtDtls.SelectedRows.Count > 0 Then
             MsgBox("Exist payment history with this invoice!, Please reverse payment before editing!", MsgBoxStyle.Exclamation, "Edit Invoice")
             Exit Sub
         End If
-
         Act_typ = "EDIT"
         If MsgBox("Are you sure you want to make change invoice?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
             With frm_sale_inv_add
@@ -133,12 +133,44 @@ Public Class frm_sale_inv
                 End If
 
                 'itme details
-                For Each r As DataGridViewRow In dgItem.Rows
-                    .dgvItem.Rows.Add(r.Cells(0).Value, r.Cells(1).Value, r.Cells(2).Value, r.Cells(3).Value, r.Cells(4).Value)
+                sqlStr = "select bd.itm_num,f.menu_nm,bd.itm_qty,bd.unit_price,bd.tot_amt,bd.remarks from tgh_food_menus f,tdhh_invoice_details bd where f.menu_num=bd.itm_num and bd.inv_num = '" & dgInvMster.SelectedRows(0).Cells(0).Value & "' ;"
+                tbl = dbHpr.SelectData(sqlStr)
+                For Each r As DataRow In tbl.Rows
+                    .dgvItem.Rows.Add(r("itm_num"), r("menu_nm"), r("itm_qty"), r("unit_price"), r("tot_amt"))
                 Next
+
+                'disable object
+                '.txtClinm.Enabled = False
+
                 .ShowDialog()
+                'master
+                sqlStr = "select v.inv_num,v.cli_num,v.cli_nm,sex_code,v.phone_num,v.mobil_num,addr_l1,mail_addr,v.inv_issu_dt,v.gros_amt,v.dscnt_amt,v.vat_amt,v.net_amt,v.crcy_code,v.deposit_amt,v.pening_amt,v.inv_status from vw_invoice_clients v where v.inv_num='" & dgInvMster.SelectedRows(0).Cells(0).Value & "'"
+                tbl = dbHpr.SelectData(sqlStr)
+                If tbl.Rows.Count > 0 Then
+                    dgInvMster.SelectedRows(0).Cells(2).Value = tbl(0)("cli_nm")
+                    dgInvMster.SelectedRows(0).Cells(3).Value = tbl(0)("phone_num")
+                    dgInvMster.SelectedRows(0).Cells(4).Value = tbl(0)("mobil_num")
+                    dgInvMster.SelectedRows(0).Cells(5).Value = tbl(0)("inv_issu_dt")
+                    dgInvMster.SelectedRows(0).Cells(6).Value = tbl(0)("gros_amt")
+                    dgInvMster.SelectedRows(0).Cells(7).Value = tbl(0)("dscnt_amt")
+                    dgInvMster.SelectedRows(0).Cells(8).Value = tbl(0)("vat_amt")
+                    dgInvMster.SelectedRows(0).Cells(9).Value = tbl(0)("net_amt")
+                    dgInvMster.SelectedRows(0).Cells(10).Value = tbl(0)("deposit_amt")
+                    dgInvMster.SelectedRows(0).Cells(11).Value = tbl(0)("pening_amt")
+                    dgInvMster.SelectedRows(0).Cells(12).Value = tbl(0)("crcy_code")
+                End If
+                'detail
+                refreshGrid()
                 .Close()
                 .Dispose()
+                If .DialogResult = System.Windows.Forms.DialogResult.OK Then
+                    'print invoice
+                    Dim err_sms As String = ""
+                    PrintPayment(.txtInvNum.Text, err_sms)
+                    If err_sms <> "0" Then
+                        Exit Sub
+                    End If
+                End If
             End With
         End If
     End Sub
@@ -172,19 +204,41 @@ Public Class frm_sale_inv
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        Dim sqlStr As String = "select rb.rbk_num,rbk_typ,rb.cli_nm,rb.id_num,rb.cli_phone,rb.bnk_frm_dt,rb.bnk_to_dt,rb.chk_out_dt,rb.grs_amt,rb.dscnt_amt,rb.net_amt,deposit_amt,rb.stat_cd,cd.nationality,cd.no_of_ppl from tgh_room_bookings rb,tgh_client_dtls cd where rb.rbk_num=cd.cli_num and  stat_cd='B' and rb.cli_nm like '%" & txtInvoice.Text & "%'"
-        Dim tbl As DataTable = dbHpr.SelectData(sqlStr, "Booking")
-        dgInvMster.Rows.Clear()
-        For Each r As DataRow In tbl.Rows
-            dgInvMster.Rows.Add(r(0), r(1), r(2), r(3), r(4), r(5), r(6), r(7), r(8), r(9), r(10), r(11), r(12), r(13), r(14))
-        Next
+        Try
+            'disable button 
+            dgInvMster.Rows.Clear()
+            Dim sqlStr As String = ""
+            Dim tbl As DataTable = Nothing
+            sqlStr = "select v.inv_num,v.cli_num,v.cli_nm,v.phone_num,v.mobil_num,v.inv_issu_dt,v.gros_amt,v.dscnt_amt,v.vat_amt,v.net_amt,v.crcy_code,v.deposit_amt,v.pening_amt,v.inv_status from vw_invoice_clients v where inv_status like '%" & txtInvStatus.Text & "%'  and cli_nm like '%" & txtClientName.Text & "%'" 'year(inv_issu_dt)='" & Now.Year & "' and MONTH(inv_issu_dt)='" & Now.Month & "'"
+            tbl = dbHpr.SelectData(sqlStr, "Invioce")
+            For Each r As DataRow In tbl.Rows
+                dgInvMster.Rows.Add(r("inv_num"),
+                              r("cli_num"),
+                              r("cli_nm"),
+                              r("phone_num"),
+                              r("mobil_num"),
+                              r("inv_issu_dt"),
+                              r("gros_amt"),
+                              r("dscnt_amt"),
+                              r("vat_amt"),
+                              r("net_amt"),
+                              r("deposit_amt"),
+                              r("pening_amt"),
+                              r("crcy_code"),
+                              r("inv_status"))
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+        End Try
     End Sub
 
     Private Sub dgv1_SelectionChanged(sender As Object, e As EventArgs) Handles dgInvMster.SelectionChanged
         On Error Resume Next
+        refreshGrid()
+    End Sub
+    Private Sub refreshGrid()
         Dim sqlStr As String = ""
         Dim tbl As DataTable = Nothing
-
         'item Details
         dgItem.Rows.Clear()
         sqlStr = "select * from tdhh_invoice_details where inv_num='" & dgInvMster.SelectedRows(0).Cells(0).Value & "'"
@@ -207,7 +261,6 @@ Public Class frm_sale_inv
             tsbRevert.Enabled = True
             tsbReprint.Enabled = True
         End If
-
     End Sub
 
     Public Shared print_typ As String = "POS"
@@ -313,26 +366,26 @@ Public Class frm_sale_inv
 
     Private Sub PrintPreview(seq_num As String, bill_num As String)
         With frmBill005PrintPreview
-            'view report
-            ''reset
-            '.ReportViewer1.Reset()
-            ''data source
-            'Dim sqlStr As String = "select v.* from vw_bill_hdrs v where  v.bill_num='" & bill_num & "'"
-            'Dim dt As DataTable = dbHpr.SelectData(sqlStr, "Bill master")
-            'Dim rds1 As New ReportDataSource("DataSet1", dt)
-            '.ReportViewer1.LocalReport.DataSources.Add(rds1)
+            'View Report
+            'reset
+            .ReportViewer1.Reset()
+            'data source
+            Dim sqlStr As String = "select v.* from vw_invoice_print_headers v where  v.inv_num='" & bill_num & "' and v.pmt_num='" & seq_num & "'"
+            Dim dt As DataTable = dbHpr.SelectData(sqlStr, "Bill master")
+            Dim rds1 As New ReportDataSource("DataSet1", dt)
+            .ReportViewer1.LocalReport.DataSources.Add(rds1)
 
-            'sqlStr = "Select d.* from vw_bill_dtls d  where  d.bill_num='" & bill_num & "' "
-            'dt = dbHpr.SelectData(sqlStr, "Bill details")
-            'Dim rds2 As New ReportDataSource("DataSet2", dt)
-            '.ReportViewer1.LocalReport.DataSources.Add(rds2)
-            ''Path
-            '.ReportViewer1.LocalReport.ReportPath = Application.StartupPath & "\rpt\rptBill002.rdlc"
-            '.ReportViewer1.ZoomMode = ZoomMode.FullPage
-            ''refresh
-            '.ReportViewer1.RefreshReport()
+            sqlStr = "select itm_num,remarks itm_nm,itm_qty,unit_price,tot_amt from tdhh_invoice_details  where inv_num='" & bill_num & "' "
+            dt = dbHpr.SelectData(sqlStr, "Bill details")
+            Dim rds2 As New ReportDataSource("DataSet2", dt)
+            .ReportViewer1.LocalReport.DataSources.Add(rds2)
+            'Path
+            .ReportViewer1.LocalReport.ReportPath = Application.StartupPath & "\rpt\rptBill002A4.rdlc"
+            .ReportViewer1.ZoomMode = ZoomMode.FullPage
+            'refresh
+            .ReportViewer1.RefreshReport()
 
-            '.ReportViewer1.SetDisplayMode(DisplayMode.PrintLayout)
+            .ReportViewer1.SetDisplayMode(DisplayMode.PrintLayout)
 
             .Width = 680
             .Height = MasterFRM.Height
@@ -384,7 +437,9 @@ Public Class frm_sale_inv
             Exit Sub
         End If
         If MsgBox("Do you want to re-print selected payment?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-            PrintPreview(1, "1111")
+            'save history
+            dbHpr.ExecProc("tgh_bill_print_histories_ins", "bill_num", dgInvMster.SelectedRows(0).Cells(0).Value & dgPmtDtls.SelectedRows(0).Cells(0).Value, "print_dt", Now.Date, "print_by", MasterFRM.loginName, "reasn", "reprint invoice for client")
+            PrintPreview(dgPmtDtls.SelectedRows(0).Cells(0).Value, dgInvMster.SelectedRows(0).Cells(0).Value)
         End If
 
     End Sub

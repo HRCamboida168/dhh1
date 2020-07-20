@@ -24,30 +24,44 @@ Partial Class frm_sale_inv
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_sale_inv))
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle57 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dgInvMster = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgItem = New System.Windows.Forms.DataGridView()
@@ -63,46 +77,32 @@ Partial Class frm_sale_inv
         Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.dtpInvDt = New System.Windows.Forms.DateTimePicker()
+        Me.dtToDate = New System.Windows.Forms.DateTimePicker()
+        Me.DtFromDate = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.txtInvoice = New System.Windows.Forms.TextBox()
+        Me.txtInvStatus = New System.Windows.Forms.TextBox()
+        Me.txtClientName = New System.Windows.Forms.TextBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tbtnAdd = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.tbtnEdi = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.tbtnDel = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbPrintInvoice = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbRevert = New System.Windows.Forms.ToolStripButton()
-        Me.tsbtnSearch = New System.Windows.Forms.ToolStripButton()
-        Me.tsbtnClose = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbReprint = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbtnSearch = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbtnClose = New System.Windows.Forms.ToolStripButton()
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
@@ -150,16 +150,16 @@ Partial Class frm_sale_inv
         '
         'SplitContainer2.Panel2
         '
-        Me.SplitContainer2.Panel2.Controls.Add(Me.DateTimePicker1)
-        Me.SplitContainer2.Panel2.Controls.Add(Me.dtpInvDt)
+        Me.SplitContainer2.Panel2.Controls.Add(Me.dtToDate)
+        Me.SplitContainer2.Panel2.Controls.Add(Me.DtFromDate)
         Me.SplitContainer2.Panel2.Controls.Add(Me.Label3)
         Me.SplitContainer2.Panel2.Controls.Add(Me.Label6)
         Me.SplitContainer2.Panel2.Controls.Add(Me.Label2)
         Me.SplitContainer2.Panel2.Controls.Add(Me.btnSearch)
         Me.SplitContainer2.Panel2.Controls.Add(Me.Label5)
         Me.SplitContainer2.Panel2.Controls.Add(Me.Label1)
-        Me.SplitContainer2.Panel2.Controls.Add(Me.TextBox1)
-        Me.SplitContainer2.Panel2.Controls.Add(Me.txtInvoice)
+        Me.SplitContainer2.Panel2.Controls.Add(Me.txtInvStatus)
+        Me.SplitContainer2.Panel2.Controls.Add(Me.txtClientName)
         Me.SplitContainer2.Size = New System.Drawing.Size(1048, 536)
         Me.SplitContainer2.SplitterDistance = 801
         Me.SplitContainer2.SplitterWidth = 5
@@ -202,18 +202,18 @@ Partial Class frm_sale_inv
         Me.dgInvMster.AllowUserToOrderColumns = True
         Me.dgInvMster.AllowUserToResizeColumns = False
         Me.dgInvMster.AllowUserToResizeRows = False
-        DataGridViewCellStyle39.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dgInvMster.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dgInvMster.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgInvMster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgInvMster.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.Column8, Me.DataGridViewTextBoxColumn2, Me.Column2, Me.Column1, Me.DataGridViewTextBoxColumn4, Me.Column3, Me.Column4, Me.Column7, Me.Column5, Me.Column10, Me.Column11, Me.Column9, Me.Column6})
-        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle46.BackColor = System.Drawing.Color.LightBlue
-        DataGridViewCellStyle46.Font = New System.Drawing.Font("Khmer OS Content", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgInvMster.DefaultCellStyle = DataGridViewCellStyle46
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Khmer OS Content", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgInvMster.DefaultCellStyle = DataGridViewCellStyle8
         Me.dgInvMster.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgInvMster.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgInvMster.Location = New System.Drawing.Point(3, 28)
@@ -223,6 +223,95 @@ Partial Class frm_sale_inv
         Me.dgInvMster.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgInvMster.Size = New System.Drawing.Size(793, 302)
         Me.dgInvMster.TabIndex = 6
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "INV No."
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Client No."
+        Me.Column8.Name = "Column8"
+        Me.Column8.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Client Name"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 150
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Phone"
+        Me.Column2.Name = "Column2"
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Mobile"
+        Me.Column1.Name = "Column1"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        DataGridViewCellStyle2.Format = "dd/MMM/yyyy"
+        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Issue Date"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'Column3
+        '
+        DataGridViewCellStyle3.Format = "N2"
+        DataGridViewCellStyle3.NullValue = "0"
+        Me.Column3.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Column3.HeaderText = "GS AMT"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        DataGridViewCellStyle4.Format = "N2"
+        DataGridViewCellStyle4.NullValue = "0"
+        Me.Column4.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Column4.HeaderText = "Dscnt AMT"
+        Me.Column4.Name = "Column4"
+        '
+        'Column7
+        '
+        DataGridViewCellStyle5.Format = "N2"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.Column7.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Column7.HeaderText = "VAT"
+        Me.Column7.Name = "Column7"
+        '
+        'Column5
+        '
+        DataGridViewCellStyle6.Format = "N2"
+        DataGridViewCellStyle6.NullValue = "0"
+        Me.Column5.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Column5.HeaderText = "Net AMT"
+        Me.Column5.Name = "Column5"
+        '
+        'Column10
+        '
+        DataGridViewCellStyle7.Format = "N2"
+        DataGridViewCellStyle7.NullValue = Nothing
+        Me.Column10.DefaultCellStyle = DataGridViewCellStyle7
+        Me.Column10.HeaderText = "Total Paid"
+        Me.Column10.Name = "Column10"
+        '
+        'Column11
+        '
+        Me.Column11.HeaderText = "Balance"
+        Me.Column11.Name = "Column11"
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "Currency"
+        Me.Column9.Name = "Column9"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Status"
+        Me.Column6.Name = "Column6"
         '
         'SplitContainer3
         '
@@ -260,18 +349,18 @@ Partial Class frm_sale_inv
         Me.dgItem.AllowUserToOrderColumns = True
         Me.dgItem.AllowUserToResizeColumns = False
         Me.dgItem.AllowUserToResizeRows = False
-        DataGridViewCellStyle47.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dgItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle47
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dgItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
         Me.dgItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgItem.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn5, Me.qty, Me.unitprice, Me.total})
-        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle51.BackColor = System.Drawing.Color.LightBlue
-        DataGridViewCellStyle51.Font = New System.Drawing.Font("Khmer OS Content", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle51.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgItem.DefaultCellStyle = DataGridViewCellStyle51
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Khmer OS Content", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgItem.DefaultCellStyle = DataGridViewCellStyle13
         Me.dgItem.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgItem.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgItem.Location = New System.Drawing.Point(3, 28)
@@ -295,26 +384,26 @@ Partial Class frm_sale_inv
         '
         'qty
         '
-        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.qty.DefaultCellStyle = DataGridViewCellStyle48
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.qty.DefaultCellStyle = DataGridViewCellStyle10
         Me.qty.HeaderText = "QTY"
         Me.qty.Name = "qty"
         '
         'unitprice
         '
-        DataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle49.Format = "N2"
-        DataGridViewCellStyle49.NullValue = Nothing
-        Me.unitprice.DefaultCellStyle = DataGridViewCellStyle49
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle11.Format = "N2"
+        DataGridViewCellStyle11.NullValue = Nothing
+        Me.unitprice.DefaultCellStyle = DataGridViewCellStyle11
         Me.unitprice.HeaderText = "Unit Price"
         Me.unitprice.Name = "unitprice"
         '
         'total
         '
-        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle50.Format = "N2"
-        DataGridViewCellStyle50.NullValue = Nothing
-        Me.total.DefaultCellStyle = DataGridViewCellStyle50
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle12.Format = "N2"
+        DataGridViewCellStyle12.NullValue = Nothing
+        Me.total.DefaultCellStyle = DataGridViewCellStyle12
         Me.total.HeaderText = "Total"
         Me.total.Name = "total"
         Me.total.Width = 120
@@ -338,18 +427,18 @@ Partial Class frm_sale_inv
         Me.dgPmtDtls.AllowUserToOrderColumns = True
         Me.dgPmtDtls.AllowUserToResizeColumns = False
         Me.dgPmtDtls.AllowUserToResizeRows = False
-        DataGridViewCellStyle52.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dgPmtDtls.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle52
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dgPmtDtls.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle14
         Me.dgPmtDtls.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgPmtDtls.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn25})
-        DataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle57.BackColor = System.Drawing.Color.LightBlue
-        DataGridViewCellStyle57.Font = New System.Drawing.Font("Khmer OS Content", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle57.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle57.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle57.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgPmtDtls.DefaultCellStyle = DataGridViewCellStyle57
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Khmer OS Content", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgPmtDtls.DefaultCellStyle = DataGridViewCellStyle19
         Me.dgPmtDtls.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgPmtDtls.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgPmtDtls.Location = New System.Drawing.Point(3, 28)
@@ -368,61 +457,61 @@ Partial Class frm_sale_inv
         '
         'DataGridViewTextBoxColumn21
         '
-        DataGridViewCellStyle53.Format = "dd/MMM/yyyy"
-        Me.DataGridViewTextBoxColumn21.DefaultCellStyle = DataGridViewCellStyle53
+        DataGridViewCellStyle15.Format = "dd/MMM/yyyy"
+        Me.DataGridViewTextBoxColumn21.DefaultCellStyle = DataGridViewCellStyle15
         Me.DataGridViewTextBoxColumn21.HeaderText = "Paid Date"
         Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
         '
         'DataGridViewTextBoxColumn22
         '
-        DataGridViewCellStyle54.Format = "N2"
-        DataGridViewCellStyle54.NullValue = "0"
-        Me.DataGridViewTextBoxColumn22.DefaultCellStyle = DataGridViewCellStyle54
+        DataGridViewCellStyle16.Format = "N2"
+        DataGridViewCellStyle16.NullValue = "0"
+        Me.DataGridViewTextBoxColumn22.DefaultCellStyle = DataGridViewCellStyle16
         Me.DataGridViewTextBoxColumn22.HeaderText = "Start Bal"
         Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
         '
         'DataGridViewTextBoxColumn23
         '
-        DataGridViewCellStyle55.Format = "N2"
-        DataGridViewCellStyle55.NullValue = "0"
-        Me.DataGridViewTextBoxColumn23.DefaultCellStyle = DataGridViewCellStyle55
+        DataGridViewCellStyle17.Format = "N2"
+        DataGridViewCellStyle17.NullValue = "0"
+        Me.DataGridViewTextBoxColumn23.DefaultCellStyle = DataGridViewCellStyle17
         Me.DataGridViewTextBoxColumn23.HeaderText = "Paid AMT"
         Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
         '
         'DataGridViewTextBoxColumn25
         '
-        DataGridViewCellStyle56.Format = "N2"
-        DataGridViewCellStyle56.NullValue = "0"
-        Me.DataGridViewTextBoxColumn25.DefaultCellStyle = DataGridViewCellStyle56
+        DataGridViewCellStyle18.Format = "N2"
+        DataGridViewCellStyle18.NullValue = "0"
+        Me.DataGridViewTextBoxColumn25.DefaultCellStyle = DataGridViewCellStyle18
         Me.DataGridViewTextBoxColumn25.HeaderText = "End Bal"
         Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
         '
-        'DateTimePicker1
+        'dtToDate
         '
-        Me.DateTimePicker1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.dtToDate.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DateTimePicker1.CustomFormat = "dd/MMM/yyyy"
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Khmer OS Content", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(16, 147)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(205, 30)
-        Me.DateTimePicker1.TabIndex = 18
+        Me.dtToDate.CustomFormat = "dd/MMM/yyyy"
+        Me.dtToDate.Font = New System.Drawing.Font("Khmer OS Content", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtToDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtToDate.Location = New System.Drawing.Point(16, 147)
+        Me.dtToDate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.dtToDate.Name = "dtToDate"
+        Me.dtToDate.Size = New System.Drawing.Size(204, 30)
+        Me.dtToDate.TabIndex = 18
         '
-        'dtpInvDt
+        'DtFromDate
         '
-        Me.dtpInvDt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.DtFromDate.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtpInvDt.Checked = False
-        Me.dtpInvDt.CustomFormat = "dd/MMM/yyyy"
-        Me.dtpInvDt.Font = New System.Drawing.Font("Khmer OS Content", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpInvDt.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpInvDt.Location = New System.Drawing.Point(16, 92)
-        Me.dtpInvDt.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.dtpInvDt.Name = "dtpInvDt"
-        Me.dtpInvDt.Size = New System.Drawing.Size(205, 30)
-        Me.dtpInvDt.TabIndex = 18
+        Me.DtFromDate.Checked = False
+        Me.DtFromDate.CustomFormat = "dd/MMM/yyyy"
+        Me.DtFromDate.Font = New System.Drawing.Font("Khmer OS Content", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DtFromDate.Location = New System.Drawing.Point(16, 92)
+        Me.DtFromDate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.DtFromDate.Name = "DtFromDate"
+        Me.DtFromDate.Size = New System.Drawing.Size(204, 30)
+        Me.DtFromDate.TabIndex = 18
         '
         'Label3
         '
@@ -467,7 +556,7 @@ Partial Class frm_sale_inv
         Me.btnSearch.Location = New System.Drawing.Point(16, 245)
         Me.btnSearch.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(205, 30)
+        Me.btnSearch.Size = New System.Drawing.Size(204, 30)
         Me.btnSearch.TabIndex = 3
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = True
@@ -494,27 +583,27 @@ Partial Class frm_sale_inv
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Client Name"
         '
-        'TextBox1
+        'txtInvStatus
         '
-        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.txtInvStatus.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Font = New System.Drawing.Font("Khmer OS Content", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(16, 207)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(205, 30)
-        Me.TextBox1.TabIndex = 0
+        Me.txtInvStatus.Font = New System.Drawing.Font("Khmer OS Content", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtInvStatus.Location = New System.Drawing.Point(16, 207)
+        Me.txtInvStatus.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtInvStatus.Name = "txtInvStatus"
+        Me.txtInvStatus.Size = New System.Drawing.Size(204, 30)
+        Me.txtInvStatus.TabIndex = 0
         '
-        'txtInvoice
+        'txtClientName
         '
-        Me.txtInvoice.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.txtClientName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtInvoice.Font = New System.Drawing.Font("Khmer OS Content", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtInvoice.Location = New System.Drawing.Point(16, 34)
-        Me.txtInvoice.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtInvoice.Name = "txtInvoice"
-        Me.txtInvoice.Size = New System.Drawing.Size(205, 30)
-        Me.txtInvoice.TabIndex = 0
+        Me.txtClientName.Font = New System.Drawing.Font("Khmer OS Content", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtClientName.Location = New System.Drawing.Point(16, 34)
+        Me.txtClientName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtClientName.Name = "txtClientName"
+        Me.txtClientName.Size = New System.Drawing.Size(204, 30)
+        Me.txtClientName.TabIndex = 0
         '
         'ToolStrip1
         '
@@ -528,125 +617,6 @@ Partial Class frm_sale_inv
         Me.ToolStrip1.TabIndex = 4
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 43)
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 43)
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 43)
-        '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 43)
-        '
-        'ToolStripSeparator6
-        '
-        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 43)
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 43)
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "INV No."
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Client No."
-        Me.Column8.Name = "Column8"
-        Me.Column8.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Client Name"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 150
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Phone"
-        Me.Column2.Name = "Column2"
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Mobile"
-        Me.Column1.Name = "Column1"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        DataGridViewCellStyle40.Format = "dd/MMM/yyyy"
-        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle40
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Issue Date"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'Column3
-        '
-        DataGridViewCellStyle41.Format = "N2"
-        DataGridViewCellStyle41.NullValue = "0"
-        Me.Column3.DefaultCellStyle = DataGridViewCellStyle41
-        Me.Column3.HeaderText = "GS AMT"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        DataGridViewCellStyle42.Format = "N2"
-        DataGridViewCellStyle42.NullValue = "0"
-        Me.Column4.DefaultCellStyle = DataGridViewCellStyle42
-        Me.Column4.HeaderText = "Dscnt AMT"
-        Me.Column4.Name = "Column4"
-        '
-        'Column7
-        '
-        DataGridViewCellStyle43.Format = "N2"
-        DataGridViewCellStyle43.NullValue = Nothing
-        Me.Column7.DefaultCellStyle = DataGridViewCellStyle43
-        Me.Column7.HeaderText = "VAT"
-        Me.Column7.Name = "Column7"
-        '
-        'Column5
-        '
-        DataGridViewCellStyle44.Format = "N2"
-        DataGridViewCellStyle44.NullValue = "0"
-        Me.Column5.DefaultCellStyle = DataGridViewCellStyle44
-        Me.Column5.HeaderText = "Net AMT"
-        Me.Column5.Name = "Column5"
-        '
-        'Column10
-        '
-        DataGridViewCellStyle45.Format = "N2"
-        DataGridViewCellStyle45.NullValue = Nothing
-        Me.Column10.DefaultCellStyle = DataGridViewCellStyle45
-        Me.Column10.HeaderText = "Total Paid"
-        Me.Column10.Name = "Column10"
-        '
-        'Column11
-        '
-        Me.Column11.HeaderText = "Balance"
-        Me.Column11.Name = "Column11"
-        '
-        'Column9
-        '
-        Me.Column9.HeaderText = "Currency"
-        Me.Column9.Name = "Column9"
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Status"
-        Me.Column6.Name = "Column6"
-        '
         'tbtnAdd
         '
         Me.tbtnAdd.Image = Global.DHHMS.My.Resources.Resources.netvibes
@@ -654,6 +624,11 @@ Partial Class frm_sale_inv
         Me.tbtnAdd.Name = "tbtnAdd"
         Me.tbtnAdd.Size = New System.Drawing.Size(119, 40)
         Me.tbtnAdd.Text = "Add Invoice"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 43)
         '
         'tbtnEdi
         '
@@ -663,6 +638,11 @@ Partial Class frm_sale_inv
         Me.tbtnEdi.Size = New System.Drawing.Size(118, 40)
         Me.tbtnEdi.Text = "Edit Invoice"
         '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 43)
+        '
         'tbtnDel
         '
         Me.tbtnDel.Image = Global.DHHMS.My.Resources.Resources.edit_remove
@@ -671,6 +651,11 @@ Partial Class frm_sale_inv
         Me.tbtnDel.Size = New System.Drawing.Size(135, 40)
         Me.tbtnDel.Text = "Cancel Invoice"
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 43)
+        '
         'tsbPrintInvoice
         '
         Me.tsbPrintInvoice.Image = Global.DHHMS.My.Resources.Resources.printer_4
@@ -678,6 +663,11 @@ Partial Class frm_sale_inv
         Me.tsbPrintInvoice.Name = "tsbPrintInvoice"
         Me.tsbPrintInvoice.Size = New System.Drawing.Size(133, 40)
         Me.tsbPrintInvoice.Text = "Print Payment"
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 43)
         '
         'tsbRevert
         '
@@ -688,23 +678,10 @@ Partial Class frm_sale_inv
         Me.tsbRevert.Size = New System.Drawing.Size(155, 40)
         Me.tsbRevert.Text = "Reverse Payment"
         '
-        'tsbtnSearch
+        'ToolStripSeparator6
         '
-        Me.tsbtnSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbtnSearch.Image = Global.DHHMS.My.Resources.Resources.search
-        Me.tsbtnSearch.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbtnSearch.Name = "tsbtnSearch"
-        Me.tsbtnSearch.Size = New System.Drawing.Size(40, 40)
-        Me.tsbtnSearch.Text = "Search Booking"
-        '
-        'tsbtnClose
-        '
-        Me.tsbtnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbtnClose.Image = CType(resources.GetObject("tsbtnClose.Image"), System.Drawing.Image)
-        Me.tsbtnClose.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbtnClose.Name = "tsbtnClose"
-        Me.tsbtnClose.Size = New System.Drawing.Size(40, 40)
-        Me.tsbtnClose.Text = "ToolStripButton2"
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 43)
         '
         'tsbReprint
         '
@@ -719,6 +696,29 @@ Partial Class frm_sale_inv
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
         Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 43)
+        '
+        'tsbtnSearch
+        '
+        Me.tsbtnSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbtnSearch.Image = Global.DHHMS.My.Resources.Resources.search
+        Me.tsbtnSearch.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbtnSearch.Name = "tsbtnSearch"
+        Me.tsbtnSearch.Size = New System.Drawing.Size(40, 40)
+        Me.tsbtnSearch.Text = "Search Booking"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 43)
+        '
+        'tsbtnClose
+        '
+        Me.tsbtnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbtnClose.Image = CType(resources.GetObject("tsbtnClose.Image"), System.Drawing.Image)
+        Me.tsbtnClose.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbtnClose.Name = "tsbtnClose"
+        Me.tsbtnClose.Size = New System.Drawing.Size(40, 40)
+        Me.tsbtnClose.Text = "ToolStripButton2"
         '
         'frm_sale_inv
         '
@@ -768,7 +768,7 @@ Partial Class frm_sale_inv
     Friend WithEvents SplitContainer2 As SplitContainer
     Friend WithEvents btnSearch As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtInvoice As TextBox
+    Friend WithEvents txtClientName As TextBox
     Friend WithEvents tsbtnSearch As ToolStripButton
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents Label5 As Label
@@ -784,8 +784,8 @@ Partial Class frm_sale_inv
     Friend WithEvents qty As DataGridViewTextBoxColumn
     Friend WithEvents unitprice As DataGridViewTextBoxColumn
     Friend WithEvents total As DataGridViewTextBoxColumn
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents dtpInvDt As DateTimePicker
+    Friend WithEvents dtToDate As DateTimePicker
+    Friend WithEvents DtFromDate As DateTimePicker
     Friend WithEvents Label6 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents tsbPrintInvoice As ToolStripButton
@@ -796,7 +796,7 @@ Partial Class frm_sale_inv
     Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn25 As DataGridViewTextBoxColumn
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtInvStatus As TextBox
     Friend WithEvents tsbRevert As ToolStripButton
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
