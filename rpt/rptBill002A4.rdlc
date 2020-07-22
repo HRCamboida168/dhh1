@@ -11,7 +11,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>2.39718in</Height>
+              <Height>2.28052in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -173,9 +173,9 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox7</rd:DefaultName>
-                          <Top>1.56664in</Top>
+                          <Top>1.59164in</Top>
                           <Left>0.03002in</Left>
-                          <Height>0.2in</Height>
+                          <Height>0.16667in</Height>
                           <Width>0.71123in</Width>
                           <ZIndex>4</ZIndex>
                           <Style>
@@ -206,9 +206,9 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>cli_nm</rd:DefaultName>
-                          <Top>1.56664in</Top>
+                          <Top>1.59164in</Top>
                           <Left>0.81069in</Left>
-                          <Height>0.2in</Height>
+                          <Height>0.16667in</Height>
                           <Width>2.97503in</Width>
                           <ZIndex>5</ZIndex>
                           <Style>
@@ -241,7 +241,7 @@
                           <rd:DefaultName>Textbox9</rd:DefaultName>
                           <Top>1.76525in</Top>
                           <Left>0.03002in</Left>
-                          <Height>0.2in</Height>
+                          <Height>0.16667in</Height>
                           <Width>0.71123in</Width>
                           <ZIndex>6</ZIndex>
                           <Style>
@@ -274,7 +274,7 @@
                           <rd:DefaultName>Textbox10</rd:DefaultName>
                           <Top>1.76525in</Top>
                           <Left>0.81069in</Left>
-                          <Height>0.2in</Height>
+                          <Height>0.16667in</Height>
                           <Width>2.97503in</Width>
                           <ZIndex>7</ZIndex>
                           <Style>
@@ -305,9 +305,9 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox11</rd:DefaultName>
-                          <Top>1.96941in</Top>
+                          <Top>1.94441in</Top>
                           <Left>0.03002in</Left>
-                          <Height>0.2in</Height>
+                          <Height>0.16667in</Height>
                           <Width>0.71123in</Width>
                           <ZIndex>8</ZIndex>
                           <Style>
@@ -338,9 +338,9 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>cli_phone</rd:DefaultName>
-                          <Top>1.96941in</Top>
+                          <Top>1.94441in</Top>
                           <Left>0.81069in</Left>
-                          <Height>0.2in</Height>
+                          <Height>0.16667in</Height>
                           <Width>2.97503in</Width>
                           <ZIndex>9</ZIndex>
                           <Style>
@@ -360,7 +360,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>="Invoice Date: "&amp; format(First(Fields!inv_issu_dt.Value, "DataSet1"),"dd-MMM-yyyy")</Value>
+                                  <Value>="ថ្ងៃបញ្ជាទិញ៖ "&amp; format(First(Fields!inv_issu_dt.Value, "DataSet1"),"dd-MMM-yyyy")</Value>
                                   <Style>
                                     <FontFamily>khmer os content</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -375,7 +375,7 @@
                           <rd:DefaultName>bnk_frm_dt</rd:DefaultName>
                           <Top>1.2708in</Top>
                           <Left>4.18107in</Left>
-                          <Height>0.2in</Height>
+                          <Height>0.16667in</Height>
                           <Width>2.49964in</Width>
                           <ZIndex>10</ZIndex>
                           <Style>
@@ -395,7 +395,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>="Payment Date: " &amp; format(First(Fields!pmt_dt.Value, "DataSet1"),"dd-MMM-yyyy")</Value>
+                                  <Value>="ថ្ងៃបង់ប្រាក់៖ " &amp; format(First(Fields!pmt_dt.Value, "DataSet1"),"dd-MMM-yyyy")</Value>
                                   <Style>
                                     <FontFamily>khmer os content</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -408,46 +408,11 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>chk_out_dt</rd:DefaultName>
-                          <Top>1.48607in</Top>
+                          <Top>1.44857in</Top>
                           <Left>4.18107in</Left>
-                          <Height>0.2in</Height>
+                          <Height>0.16667in</Height>
                           <Width>2.49964in</Width>
                           <ZIndex>11</ZIndex>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                        <Textbox Name="Textbox38">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>="Printed: " &amp; format(now.Date,"dd-MMM-yyyy")</Value>
-                                  <Style>
-                                    <FontFamily>calibri</FontFamily>
-                                    <FontSize>9pt</FontSize>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox38</rd:DefaultName>
-                          <Top>2.17635in</Top>
-                          <Left>4.17756in</Left>
-                          <Height>0.2in</Height>
-                          <Width>2.49964in</Width>
-                          <ZIndex>12</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -492,7 +457,7 @@
                           <Left>0.04044in</Left>
                           <Height>0.34757in</Height>
                           <Width>3.74528in</Width>
-                          <ZIndex>13</ZIndex>
+                          <ZIndex>12</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -511,7 +476,7 @@
                           <Left>0.04044in</Left>
                           <Height>0.95691in</Height>
                           <Width>3.74528in</Width>
-                          <ZIndex>14</ZIndex>
+                          <ZIndex>13</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -536,11 +501,11 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox2</rd:DefaultName>
-                          <Top>2.18885in</Top>
+                          <Top>2.11385in</Top>
                           <Left>0.03002in</Left>
-                          <Height>0.20833in</Height>
+                          <Height>0.16667in</Height>
                           <Width>0.71123in</Width>
-                          <ZIndex>15</ZIndex>
+                          <ZIndex>14</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -568,10 +533,45 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox14</rd:DefaultName>
-                          <Top>2.18885in</Top>
+                          <Top>2.11385in</Top>
                           <Left>0.81069in</Left>
-                          <Height>0.1875in</Height>
+                          <Height>0.16667in</Height>
                           <Width>2.97503in</Width>
+                          <ZIndex>15</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="chk_out_dt2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>="ប្រាក់ត្រូវបង់៖ " &amp;​ Sum(Fields!pmt_amt.Value, "DataSet1")</Value>
+                                  <Style>
+                                    <FontFamily>khmer os content</FontFamily>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>chk_out_dt</rd:DefaultName>
+                          <Top>1.80275in</Top>
+                          <Left>4.18107in</Left>
+                          <Height>0.16667in</Height>
+                          <Width>2.49964in</Width>
                           <ZIndex>16</ZIndex>
                           <Style>
                             <Border>
@@ -591,7 +591,6 @@
                         </Border>
                       </Style>
                     </Rectangle>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -611,7 +610,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Height>2.39718in</Height>
+        <Left>0in</Left>
+        <Height>2.28052in</Height>
         <Width>6.68071in</Width>
         <Style>
           <Border>
@@ -640,7 +640,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.23958in</Height>
+              <Height>0.17014in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -654,6 +654,7 @@
                               <Value>ល.រ</Value>
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -671,7 +672,7 @@
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>1.5pt</Width>
+                          <Width>0.75pt</Width>
                         </BottomBorder>
                         <BackgroundColor>Silver</BackgroundColor>
                         <VerticalAlign>Bottom</VerticalAlign>
@@ -695,6 +696,7 @@
                               <Value>ឈ្មោះទំនិញ</Value>
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -710,7 +712,7 @@
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>1.5pt</Width>
+                          <Width>0.75pt</Width>
                         </BottomBorder>
                         <BackgroundColor>Silver</BackgroundColor>
                         <VerticalAlign>Bottom</VerticalAlign>
@@ -734,6 +736,7 @@
                               <Value>បរិមាណ</Value>
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -751,7 +754,7 @@
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>1.5pt</Width>
+                          <Width>0.75pt</Width>
                         </BottomBorder>
                         <BackgroundColor>Silver</BackgroundColor>
                         <VerticalAlign>Bottom</VerticalAlign>
@@ -775,6 +778,7 @@
                               <Value>តម្លៃរាយ</Value>
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -792,7 +796,7 @@
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>1.5pt</Width>
+                          <Width>0.75pt</Width>
                         </BottomBorder>
                         <BackgroundColor>Silver</BackgroundColor>
                         <VerticalAlign>Bottom</VerticalAlign>
@@ -816,6 +820,7 @@
                               <Value>សរុប</Value>
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -833,7 +838,7 @@
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>1.5pt</Width>
+                          <Width>0.75pt</Width>
                         </BottomBorder>
                         <BackgroundColor>Silver</BackgroundColor>
                         <VerticalAlign>Bottom</VerticalAlign>
@@ -848,7 +853,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.23785in</Height>
+              <Height>0.17709in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1047,8 +1052,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
-        <Top>2.40139in</Top>
-        <Height>0.47743in</Height>
+        <Top>2.53889in</Top>
+        <Left>0in</Left>
+        <Height>0.34722in</Height>
         <Width>6.67719in</Width>
         <ZIndex>1</ZIndex>
         <Style>
@@ -1066,7 +1072,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.93895in</Height>
+              <Height>0.53733in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1076,15 +1082,15 @@
                           <TablixBody>
                             <TablixColumns>
                               <TablixColumn>
-                                <Width>1.54205in</Width>
+                                <Width>1.59205in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1.20293in</Width>
+                                <Width>1.25293in</Width>
                               </TablixColumn>
                             </TablixColumns>
                             <TablixRows>
                               <TablixRow>
-                                <Height>0.18634in</Height>
+                                <Height>0.12818in</Height>
                                 <TablixCells>
                                   <TablixCell>
                                     <CellContents>
@@ -1095,7 +1101,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>  Total (USD)</Value>
+                                                <Value>តម្លៃសរុប៖ </Value>
                                                 <Style>
                                                   <FontFamily>khmer os content</FontFamily>
                                                   <FontSize>9pt</FontSize>
@@ -1171,7 +1177,92 @@
                                 </TablixCells>
                               </TablixRow>
                               <TablixRow>
-                                <Height>0.20081in</Height>
+                                <Height>0.13108in</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox16">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>តម្លៃបញ្ចុះសរុប៖</Value>
+                                                <Style>
+                                                  <FontFamily>khmer os content</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox16</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>None</Style>
+                                          </Border>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>0.5pt</Width>
+                                          </BottomBorder>
+                                          <BackgroundColor>Silver</BackgroundColor>
+                                          <VerticalAlign>Bottom</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox17">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=Sum(Fields!dscnt_amt.Value, "DataSet1")</Value>
+                                                <Style>
+                                                  <FontFamily>khmer os content</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Right</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox17</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>None</Style>
+                                          </Border>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>0.5pt</Width>
+                                          </BottomBorder>
+                                          <BackgroundColor>Silver</BackgroundColor>
+                                          <VerticalAlign>Bottom</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                              <TablixRow>
+                                <Height>0.14265in</Height>
                                 <TablixCells>
                                   <TablixCell>
                                     <CellContents>
@@ -1182,7 +1273,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>  VAT(%)</Value>
+                                                <Value>  ពន្ធអាករ(%)</Value>
                                                 <Style>
                                                   <FontFamily>khmer os content</FontFamily>
                                                   <FontSize>9pt</FontSize>
@@ -1256,7 +1347,7 @@
                                 </TablixCells>
                               </TablixRow>
                               <TablixRow>
-                                <Height>0.19358in</Height>
+                                <Height>0.13542in</Height>
                                 <TablixCells>
                                   <TablixCell>
                                     <CellContents>
@@ -1267,7 +1358,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>  Grand Total (USD)</Value>
+                                                <Value>  តម្លៃរសុបសុទ្ធ៖</Value>
                                                 <Style>
                                                   <FontFamily>khmer os content</FontFamily>
                                                   <FontSize>9pt</FontSize>
@@ -1306,7 +1397,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value EvaluationMode="Constant" />
+                                                <Value>=Sum(Fields!net_amt.Value, "DataSet1")</Value>
                                                 <Style>
                                                   <FontFamily>khmer os content</FontFamily>
                                                   <FontSize>9pt</FontSize>
@@ -1319,178 +1410,6 @@
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>net_amt1</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>0.5pt</Width>
-                                          </BottomBorder>
-                                          <BackgroundColor>Silver</BackgroundColor>
-                                          <VerticalAlign>Bottom</VerticalAlign>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                </TablixCells>
-                              </TablixRow>
-                              <TablixRow>
-                                <Height>0.17911in</Height>
-                                <TablixCells>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="Textbox13">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>  Deposit (USD)</Value>
-                                                <Style>
-                                                  <FontFamily>khmer os content</FontFamily>
-                                                  <FontSize>9pt</FontSize>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style />
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>Textbox13</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>0.5pt</Width>
-                                          </BottomBorder>
-                                          <BackgroundColor>Silver</BackgroundColor>
-                                          <VerticalAlign>Bottom</VerticalAlign>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="deposit_amt">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value />
-                                                <Style>
-                                                  <FontFamily>khmer os content</FontFamily>
-                                                  <FontSize>9pt</FontSize>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Right</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>deposit_amt</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>0.5pt</Width>
-                                          </BottomBorder>
-                                          <BackgroundColor>Silver</BackgroundColor>
-                                          <VerticalAlign>Bottom</VerticalAlign>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                </TablixCells>
-                              </TablixRow>
-                              <TablixRow>
-                                <Height>0.17911in</Height>
-                                <TablixCells>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="Textbox8">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>  Total Payment (USD)</Value>
-                                                <Style>
-                                                  <FontFamily>khmer os content</FontFamily>
-                                                  <FontSize>9pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style />
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>Textbox8</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>None</Style>
-                                          </Border>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>0.5pt</Width>
-                                          </BottomBorder>
-                                          <BackgroundColor>Silver</BackgroundColor>
-                                          <VerticalAlign>Bottom</VerticalAlign>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="Textbox12">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value />
-                                                <Style>
-                                                  <FontFamily>khmer os content</FontFamily>
-                                                  <FontSize>9pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Right</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>Textbox12</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>None</Style>
@@ -1526,13 +1445,12 @@
                               <TablixMember />
                               <TablixMember />
                               <TablixMember />
-                              <TablixMember />
                             </TablixMembers>
                           </TablixRowHierarchy>
                           <DataSetName>DataSet1</DataSetName>
-                          <Left>3.93572in</Left>
-                          <Height>0.93895in</Height>
-                          <Width>2.74498in</Width>
+                          <Left>3.83572in</Left>
+                          <Height>0.53733in</Height>
+                          <Width>2.84498in</Width>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1572,9 +1490,706 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>2.90834in</Top>
-        <Height>0.93895in</Height>
+        <Left>0in</Left>
+        <Height>0.53733in</Height>
         <Width>6.6807in</Width>
         <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="Textbox38">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Printed: " &amp; format(now.Date,"dd-MMM-yyyy")</Value>
+                <Style>
+                  <FontFamily>calibri</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox38</rd:DefaultName>
+        <Top>2.32496in</Top>
+        <Left>4.18107in</Left>
+        <Height>0.16667in</Height>
+        <Width>2.49964in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox39">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>1. មុខទំនិញ និង សរុបវិក័យប័ត្រ</Value>
+                <Style>
+                  <FontFamily>calibri</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox38</rd:DefaultName>
+        <Top>2.32496in</Top>
+        <Left>0in</Left>
+        <Height>0.16667in</Height>
+        <Width>2.49964in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox40">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>2. ការបង់ប្រាក់</Value>
+                <Style>
+                  <FontFamily>calibri</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox38</rd:DefaultName>
+        <Top>3.57229in</Top>
+        <Left>0in</Left>
+        <Height>0.16667in</Height>
+        <Width>2.49964in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix5">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.22573in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.22573in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.22573in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.17361in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox50">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>សរុបមុនបង</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox50</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox51">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>ទឹកប្រាក់ត្រូវបង់</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox51</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox52">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>ប្រាក់នៅសល់</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox52</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.20833in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox37">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!strt_amt.Value, "DataSet1")</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox37</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox45">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!pmt_amt.Value, "DataSet1")</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox45</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox48">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!end_bal.Value, "DataSet1")</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox48</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>3.78389in</Top>
+        <Left>0in</Left>
+        <Height>0.38194in</Height>
+        <Width>6.67719in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="Textbox44">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>3. ប្រវត្តការបង់ប្រាក់</Value>
+                <Style>
+                  <FontFamily>calibri</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox38</rd:DefaultName>
+        <Top>4.28757in</Top>
+        <Height>0.16667in</Height>
+        <Width>2.49964in</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix6">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.22573in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.22573in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.22573in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.17361in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox53">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>សរុបមុនបង</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox50</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox54">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>ទឹកប្រាក់ត្រូវបង់</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox51</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox55">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>ប្រាក់នៅសល់</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox52</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.20833in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox46">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!strt_amt.Value, "DataSet1")</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox37</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox49">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!pmt_amt.Value, "DataSet1")</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox45</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox56">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!end_bal.Value, "DataSet1")</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox48</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>4.52368in</Top>
+        <Height>0.38194in</Height>
+        <Width>6.67719in</Width>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1614,6 +2229,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox47</rd:DefaultName>
           <Top>0.96528in</Top>
+          <Left>0in</Left>
           <Height>0.40625in</Height>
           <Width>6.62919in</Width>
           <Style>
@@ -1755,6 +2371,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox41</rd:DefaultName>
+          <Left>0in</Left>
           <Height>0.55208in</Height>
           <Width>2.0919in</Width>
           <ZIndex>3</ZIndex>
