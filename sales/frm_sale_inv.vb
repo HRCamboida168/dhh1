@@ -176,7 +176,75 @@ Public Class frm_sale_inv
     End Sub
 
     Private Sub dgv1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgInvMster.CellDoubleClick
-        SDEdit()
+        viewDetails
+    End Sub
+    Private Sub viewDetails()
+        If dgInvMster.SelectedRows.Count = 0 Then
+            Exit Sub
+        End If
+        Act_typ = "VDTLS"
+        With frm_sale_inv_add
+            Dim sqlStr As String = "select fld_valu,concat(fld_valu, ' - ', fld_valu_desc_en) val_desc from tswa_field_values f where f.fld_nm='SEX_CODE' and status='A'"
+            Dim tbl As DataTable = dbHpr.SelectData(sqlStr, "client type")
+            .cboSexcode.DataSource = tbl
+            .cboSexcode.DisplayMember = "val_desc"
+            .cboSexcode.ValueMember = "fld_valu"
+
+            sqlStr = "select crcy_code,CONCAT(crcy_code,' - ', crcy_desc_en,' - ', crcy_amt) crcy_desc from tcurrency_masters where stat_cd='A'"
+            tbl = dbHpr.SelectData(sqlStr, "Currency")
+            .cboCurrency.DataSource = tbl
+            .cboCurrency.DisplayMember = "crcy_desc"
+            .cboCurrency.ValueMember = "crcy_code"
+
+            'invoice master
+            sqlStr = "select v.inv_num,v.cli_num,v.cli_nm,sex_code,v.phone_num,v.mobil_num,addr_l1,mail_addr,v.inv_issu_dt,v.gros_amt,v.dscnt_amt,v.vat_amt,v.net_amt,v.crcy_code,v.deposit_amt,v.pening_amt,v.inv_status from vw_invoice_clients v where v.inv_num='" & dgInvMster.SelectedRows(0).Cells(0).Value & "'"
+            tbl = dbHpr.SelectData(sqlStr)
+            If tbl.Rows.Count > 0 Then
+                'client
+                .txtcli_num.Text = tbl.Rows(0)("cli_num")
+                .txtClinm.Text = tbl.Rows(0)("cli_nm")
+                .cboSexcode.SelectedValue = tbl.Rows(0)("sex_code")
+                .txtphoneNum.Text = tbl.Rows(0)("phone_num")
+                .txtMobilNum.Text = tbl.Rows(0)("mobil_num")
+                .txtAddress.Text = tbl.Rows(0)("addr_l1")
+                .txtMail.Text = tbl.Rows(0)("mail_addr")
+                'invoice
+                .txtInvNum.Text = tbl.Rows(0)("inv_num")
+                .dtpInvDt.Value = tbl.Rows(0)("inv_issu_dt")
+                .cboCurrency.SelectedValue = tbl.Rows(0)("crcy_code")
+                .txtDiscntAmt.Text = tbl.Rows(0)("dscnt_amt")
+                .txtVAT.Text = tbl.Rows(0)("vat_amt")
+            End If
+
+            'itme details
+            sqlStr = "select bd.itm_num,f.menu_nm,bd.itm_qty,bd.unit_price,bd.tot_amt,bd.remarks from tgh_food_menus f,tdhh_invoice_details bd where f.menu_num=bd.itm_num and bd.inv_num = '" & dgInvMster.SelectedRows(0).Cells(0).Value & "' ;"
+            tbl = dbHpr.SelectData(sqlStr)
+            For Each r As DataRow In tbl.Rows
+                .dgvItem.Rows.Add(r("itm_num"), r("menu_nm"), r("itm_qty"), r("unit_price"), r("tot_amt"))
+            Next
+            'disable objects
+            'client
+            .txtcli_num.ReadOnly = True
+            .txtClinm.ReadOnly = True
+            .cboSexcode.Enabled = False
+            .txtphoneNum.ReadOnly = True
+            .txtMobilNum.ReadOnly = True
+            .txtAddress.ReadOnly = True
+            .txtMail.ReadOnly = True
+            'invoice
+            .txtInvNum.ReadOnly = True
+            .dtpInvDt.Enabled = False
+            .cboCurrency.Enabled = False
+            .txtDiscntAmt.ReadOnly = True
+            .txtVAT.ReadOnly = True
+            .btnAdd.Enabled = False
+            .btnRemove.Enabled = False
+            .btnPrintInvoice.Enabled = False
+            .OK_Button.Enabled = False
+            .ShowDialog()
+            .Close()
+            .Dispose()
+        End With
     End Sub
 
     Private Sub tbtnDel_Click(sender As Object, e As EventArgs) Handles tbtnDel.Click
@@ -379,6 +447,12 @@ Public Class frm_sale_inv
             dt = dbHpr.SelectData(sqlStr, "Bill details")
             Dim rds2 As New ReportDataSource("DataSet2", dt)
             .ReportViewer1.LocalReport.DataSources.Add(rds2)
+
+            sqlStr = "select pmt_num,pmt_dt, strt_bal,pmt_amt,end_bal from tdhh_invoice_payments where inv_num='" & bill_num & "' and cast(pmt_num as int)< '" & seq_num & "' and rec_status='A'"
+            dt = dbHpr.SelectData(sqlStr, "Payment details")
+            Dim rds3 As New ReportDataSource("DataSet3", dt)
+            .ReportViewer1.LocalReport.DataSources.Add(rds3)
+
             'Path
             .ReportViewer1.LocalReport.ReportPath = Application.StartupPath & "\rpt\rptBill002A4.rdlc"
             .ReportViewer1.ZoomMode = ZoomMode.FullPage
@@ -441,6 +515,10 @@ Public Class frm_sale_inv
             dbHpr.ExecProc("tgh_bill_print_histories_ins", "bill_num", dgInvMster.SelectedRows(0).Cells(0).Value & dgPmtDtls.SelectedRows(0).Cells(0).Value, "print_dt", Now.Date, "print_by", MasterFRM.loginName, "reasn", "reprint invoice for client")
             PrintPreview(dgPmtDtls.SelectedRows(0).Cells(0).Value, dgInvMster.SelectedRows(0).Cells(0).Value)
         End If
+
+    End Sub
+
+    Private Sub dgInvMster_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgInvMster.CellContentClick
 
     End Sub
 End Class

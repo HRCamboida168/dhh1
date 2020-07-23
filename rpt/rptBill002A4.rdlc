@@ -27,7 +27,7 @@
                                 <TextRun>
                                   <Value>វិក័យប័ត្រ</Value>
                                   <Style>
-                                    <FontFamily>khmer os muol</FontFamily>
+                                    <FontFamily>khmer m1</FontFamily>
                                     <FontSize>24pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -272,7 +272,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox10</rd:DefaultName>
-                          <Top>1.76525in</Top>
+                          <Top>1.77774in</Top>
                           <Left>0.81069in</Left>
                           <Height>0.16667in</Height>
                           <Width>2.97503in</Width>
@@ -558,25 +558,27 @@
                                   <Value>="ប្រាក់ត្រូវបង់៖ " &amp;​ Sum(Fields!pmt_amt.Value, "DataSet1")</Value>
                                   <Style>
                                     <FontFamily>khmer os content</FontFamily>
-                                    <FontSize>9pt</FontSize>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>chk_out_dt</rd:DefaultName>
                           <Top>1.80275in</Top>
                           <Left>4.18107in</Left>
-                          <Height>0.16667in</Height>
+                          <Height>0.30833in</Height>
                           <Width>2.49964in</Width>
                           <ZIndex>16</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <BackgroundColor>LightGrey</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -610,7 +612,6 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Left>0in</Left>
         <Height>2.28052in</Height>
         <Width>6.68071in</Width>
         <Style>
@@ -1053,8 +1054,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
         <Top>2.53889in</Top>
-        <Left>0in</Left>
-        <Height>0.34722in</Height>
+        <Height>0.34723in</Height>
         <Width>6.67719in</Width>
         <ZIndex>1</ZIndex>
         <Style>
@@ -1490,7 +1490,6 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>2.90834in</Top>
-        <Left>0in</Left>
         <Height>0.53733in</Height>
         <Width>6.6807in</Width>
         <ZIndex>2</ZIndex>
@@ -1545,7 +1544,9 @@
                 <Value>1. មុខទំនិញ និង សរុបវិក័យប័ត្រ</Value>
                 <Style>
                   <FontFamily>calibri</FontFamily>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1556,7 +1557,6 @@
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
         <Top>2.32496in</Top>
-        <Left>0in</Left>
         <Height>0.16667in</Height>
         <Width>2.49964in</Width>
         <ZIndex>4</ZIndex>
@@ -1577,10 +1577,12 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>2. ការបង់ប្រាក់</Value>
+                <Value>៣. ការបង់ប្រាក់</Value>
                 <Style>
                   <FontFamily>calibri</FontFamily>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1590,8 +1592,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>3.57229in</Top>
-        <Left>0in</Left>
+        <Top>4.29035in</Top>
         <Height>0.16667in</Height>
         <Width>2.49964in</Width>
         <ZIndex>5</ZIndex>
@@ -1620,7 +1621,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.17361in</Height>
+              <Height>0.23611in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1635,6 +1636,7 @@
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1676,6 +1678,7 @@
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1717,6 +1720,7 @@
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1783,6 +1787,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1873,9 +1878,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>3.78389in</Top>
-        <Left>0in</Left>
-        <Height>0.38194in</Height>
+        <Top>4.4957in</Top>
+        <Height>0.44444in</Height>
         <Width>6.67719in</Width>
         <ZIndex>6</ZIndex>
         <Style>
@@ -1891,10 +1895,12 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>3. ប្រវត្តការបង់ប្រាក់</Value>
+                <Value>២. ប្រវត្តការបង់ប្រាក់</Value>
                 <Style>
-                  <FontFamily>calibri</FontFamily>
+                  <FontFamily>khmer os content</FontFamily>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1904,7 +1910,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>4.28757in</Top>
+        <Top>3.51257in</Top>
         <Height>0.16667in</Height>
         <Width>2.49964in</Width>
         <ZIndex>7</ZIndex>
@@ -1918,45 +1924,52 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Tablix Name="Tablix6">
+      <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.22573in</Width>
+              <Width>0.47777in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.22573in</Width>
+              <Width>1.61413in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.22573in</Width>
+              <Width>1.65253in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.51875in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.41753in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.17361in</Height>
+              <Height>0.25in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox53">
+                    <Textbox Name="Textbox13">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>សរុបមុនបង</Value>
+                              <Value>ល.រ</Value>
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox50</rd:DefaultName>
+                      <rd:DefaultName>Textbox13</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -1965,7 +1978,7 @@
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.75pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <BackgroundColor>Gray</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1978,26 +1991,27 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox54">
+                    <Textbox Name="Textbox18">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ទឹកប្រាក់ត្រូវបង់</Value>
+                              <Value>ថ្ងៃបង់ប្រាក់</Value>
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox51</rd:DefaultName>
+                      <rd:DefaultName>Textbox18</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2006,7 +2020,7 @@
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.75pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <BackgroundColor>Gray</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -2019,17 +2033,18 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox55">
+                    <Textbox Name="Textbox20">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ប្រាក់នៅសល់</Value>
+                              <Value>ប្រាក់សល់ដំបូង</Value>
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2038,7 +2053,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox52</rd:DefaultName>
+                      <rd:DefaultName>Textbox20</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2047,7 +2062,91 @@
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.75pt</Width>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox22">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>ប្រាក់បានបង់</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox22</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox25">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>ប្រាក់នីសល់</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox25</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <BackgroundColor>Gray</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -2061,18 +2160,18 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.20833in</Height>
+              <Height>0.25in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox46">
+                    <Textbox Name="pmt_num">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!strt_amt.Value, "DataSet1")</Value>
+                              <Value>=Fields!pmt_num.Value</Value>
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
                                 <FontSize>9pt</FontSize>
@@ -2080,11 +2179,11 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox37</rd:DefaultName>
+                      <rd:DefaultName>pmt_num</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2100,14 +2199,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox49">
+                    <Textbox Name="pmt_dt">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!pmt_amt.Value, "DataSet1")</Value>
+                              <Value>=format(Fields!pmt_dt.Value,"dd-MMM-yyyy")</Value>
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
                                 <FontSize>9pt</FontSize>
@@ -2115,11 +2214,11 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox45</rd:DefaultName>
+                      <rd:DefaultName>pmt_dt</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2135,14 +2234,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox56">
+                    <Textbox Name="strt_bal">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!end_bal.Value, "DataSet1")</Value>
+                              <Value>=Fields!strt_bal.Value</Value>
                               <Style>
                                 <FontFamily>khmer os content</FontFamily>
                                 <FontSize>9pt</FontSize>
@@ -2154,7 +2253,77 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox48</rd:DefaultName>
+                      <rd:DefaultName>strt_bal</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="pmt_amt">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!pmt_amt.Value</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>pmt_amt</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="end_bal">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!end_bal.Value</Value>
+                              <Style>
+                                <FontFamily>khmer os content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>end_bal</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2177,18 +2346,24 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
           <TablixMembers>
-            <TablixMember />
-            <TablixMember />
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="Details3" />
+            </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
-        <Top>4.52368in</Top>
-        <Height>0.38194in</Height>
-        <Width>6.67719in</Width>
+        <DataSetName>DataSet3</DataSetName>
+        <Top>3.7209in</Top>
+        <Height>0.5in</Height>
+        <Width>6.68071in</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -2197,7 +2372,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>5.51958in</Height>
+    <Height>5.67972in</Height>
     <Style />
   </Body>
   <Width>6.68071in</Width>
@@ -2229,7 +2404,6 @@
           </Paragraphs>
           <rd:DefaultName>Textbox47</rd:DefaultName>
           <Top>0.96528in</Top>
-          <Left>0in</Left>
           <Height>0.40625in</Height>
           <Width>6.62919in</Width>
           <Style>
@@ -2371,7 +2545,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox41</rd:DefaultName>
-          <Left>0in</Left>
           <Height>0.55208in</Height>
           <Width>2.0919in</Width>
           <ZIndex>3</ZIndex>
@@ -2413,6 +2586,13 @@
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>dc699d74-40e8-491f-909c-95785f3af701</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="DHHMS">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>d361d7a6-e0cd-4441-b090-be3a3b0e6f98</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -2524,6 +2704,39 @@
         <rd:DataSetName>DHHMS</rd:DataSetName>
         <rd:TableName>billDetail001Data</rd:TableName>
         <rd:ObjectDataSourceType>DHHMS.billDetail001Data, DHHMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet3">
+      <Query>
+        <DataSourceName>DHHMS</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="end_bal">
+          <DataField>end_bal</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="pmt_amt">
+          <DataField>pmt_amt</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="pmt_dt">
+          <DataField>pmt_dt</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="pmt_num">
+          <DataField>pmt_num</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="strt_bal">
+          <DataField>strt_bal</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DHHMS</rd:DataSetName>
+        <rd:TableName>billPmtHistoryData</rd:TableName>
+        <rd:ObjectDataSourceType>DHHMS.billPmtHistoryData, DHHMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

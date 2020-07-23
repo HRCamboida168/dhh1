@@ -496,7 +496,7 @@ Partial Class frm_sale_inv
         Me.dtToDate.Location = New System.Drawing.Point(16, 147)
         Me.dtToDate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dtToDate.Name = "dtToDate"
-        Me.dtToDate.Size = New System.Drawing.Size(204, 30)
+        Me.dtToDate.Size = New System.Drawing.Size(203, 30)
         Me.dtToDate.TabIndex = 18
         '
         'DtFromDate
@@ -510,7 +510,7 @@ Partial Class frm_sale_inv
         Me.DtFromDate.Location = New System.Drawing.Point(16, 92)
         Me.DtFromDate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DtFromDate.Name = "DtFromDate"
-        Me.DtFromDate.Size = New System.Drawing.Size(204, 30)
+        Me.DtFromDate.Size = New System.Drawing.Size(203, 30)
         Me.DtFromDate.TabIndex = 18
         '
         'Label3
@@ -556,7 +556,7 @@ Partial Class frm_sale_inv
         Me.btnSearch.Location = New System.Drawing.Point(16, 245)
         Me.btnSearch.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(204, 30)
+        Me.btnSearch.Size = New System.Drawing.Size(203, 30)
         Me.btnSearch.TabIndex = 3
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = True
@@ -591,7 +591,7 @@ Partial Class frm_sale_inv
         Me.txtInvStatus.Location = New System.Drawing.Point(16, 207)
         Me.txtInvStatus.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtInvStatus.Name = "txtInvStatus"
-        Me.txtInvStatus.Size = New System.Drawing.Size(204, 30)
+        Me.txtInvStatus.Size = New System.Drawing.Size(203, 30)
         Me.txtInvStatus.TabIndex = 0
         '
         'txtClientName
@@ -602,7 +602,7 @@ Partial Class frm_sale_inv
         Me.txtClientName.Location = New System.Drawing.Point(16, 34)
         Me.txtClientName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtClientName.Name = "txtClientName"
-        Me.txtClientName.Size = New System.Drawing.Size(204, 30)
+        Me.txtClientName.Size = New System.Drawing.Size(203, 30)
         Me.txtClientName.TabIndex = 0
         '
         'ToolStrip1
@@ -610,7 +610,7 @@ Partial Class frm_sale_inv
         Me.ToolStrip1.AutoSize = False
         Me.ToolStrip1.Font = New System.Drawing.Font("Khmer OS Content", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(36, 36)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tbtnAdd, Me.ToolStripSeparator2, Me.tbtnEdi, Me.ToolStripSeparator3, Me.tbtnDel, Me.ToolStripSeparator1, Me.tsbPrintInvoice, Me.ToolStripSeparator5, Me.tsbRevert, Me.ToolStripSeparator6, Me.tsbReprint, Me.ToolStripSeparator7, Me.tsbtnSearch, Me.ToolStripSeparator4, Me.tsbtnClose})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tbtnAdd, Me.ToolStripSeparator2, Me.tbtnEdi, Me.ToolStripSeparator3, Me.tbtnDel, Me.ToolStripSeparator1, Me.tsbPrintInvoice, Me.ToolStripSeparator5, Me.tsbReprint, Me.ToolStripSeparator6, Me.tsbRevert, Me.ToolStripSeparator7, Me.tsbtnSearch, Me.ToolStripSeparator4, Me.tsbtnClose})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1048, 43)
